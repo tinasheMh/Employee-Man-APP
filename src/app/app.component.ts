@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'start';
+  title = 'Employee App Implimenting RestAPI';
+  public name = 'Tinashe Mharapara';
 }

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,mBAAI",
+    "sources": [
+        "employee-profile.component.scss"
+    ],
+    "names": [],
+    "file": "employee-profile.component.css"
+}

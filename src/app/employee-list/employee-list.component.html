@@ -1,0 +1,8 @@
+<h3>{{errorMsg}}</h3>
+<div class="col-sm-4 employee-list">
+  <ul class="items">
+    <li (click)="onSelect(employee)" [class.selected]="isSelected(employee)" *ngFor="let employee of employees">
+      <span class="badge badge-secondary"> {{employee.id}}</span> {{employee.name}}
+    </li>
+  </ul>
+</div>

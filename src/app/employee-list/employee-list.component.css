@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+.items {
+  list-style: none;
+}
+
+.items li.selected {
+  background-color: #CFD8DC;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+li:hover {
+  color: blueviolet;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.badge {
+  margin-left: 0px;
+}
+
+span {
+  margin: 0px;
+}
+/*# sourceMappingURL=employee-list.component.css.map */

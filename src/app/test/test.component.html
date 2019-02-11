@@ -1,0 +1,77 @@
+<div class="col-md-5">
+  <h2>Welcome {{name}}</h2>
+  <h2>{{2+2}}</h2>
+  <h2>{{"Welcome " + name}}</h2>
+  <h2>{{name.toUpperCase()}}</h2>
+  <h2>{{greetUser()}}</h2>
+  <h2 [class]="successClass">{{siteUrl}}</h2>
+  <h2 [class.text-danger]="hasError">{{siteUrl}}</h2> <!--text biding for error-->
+  <h2 [ngClass]="messageClasses">{{siteUrl}}</h2> <!--text biding for error-->
+  <br>
+  <hr>
+  <input [id]="myId" type="text" value="Tinashe">
+  <input bind-disabled="isDisabled" id="{{myId}}" type="text" value="Tinashe">
+  <h2 [style.color]="'orange'">Style binding</h2> <!--Style binding-->
+  <h2 [style.color]="hasError ? 'red' : 'green'">Style binding 2</h2> <!--Style binding-->
+  <h2 [style.color]="highlightColor">Style binding 3</h2> <!--Style binding with property-->
+  <h2 [ngStyle]="titleStyles">Style binding 4</h2>
+  <button (click)="onClick($event)">Greet</button> <!--event binding-->
+  {{greeting}}
+  <br><br>
+  <input [(ngModel)]="myName" type="text"> <!--Twoway binding []property binding class to template & () template to class
+  in console there's an error cannot bind to ngModel import it from Angular forms Module and put in app.modules.ts file 
+  add to the imports Array imports: [FormsModule]-->
+  {{myName}}
+  <br>
+  <hr>
+  <br>
+  <!--Structural directives-->
+  <h2 *ngIf="displayName; else elseBlock"> 
+    Structural directive ngIf
+  </h2> <!--if set to false the h2 element is removed from the dom completely
+  different from the css property "display: none" whereby you'll still be able to see
+  the element in the dom-->
+  <ng-template #elseBlock>
+    <h2>Name is hidden</h2>
+  </ng-template>
+  
+  <!-- ngSwitch Directive -->
+  <div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You picked red</div>
+    <div *ngSwitchCase="'blue'">You picked blue</div>
+    <div *ngSwitchCase="'green'">You picked green</div>
+    <div *ngSwitchDefault>pick again</div>
+  </div><br>
+
+  <!-- ngFor Directive -->
+  <div *ngFor="let color of colors; first as f"> <!--colors is the array of colors, let declares a variable and the name is color -->
+      <li>{{f}} {{color}}</li> <!-- can also use index as i, first as f, last as l, even as e,-->
+  </div>
+</div>
+<br>
+<hr>
+<br>
+
+<!-- component interaction -->
+<h2>{{"Hello " + parentData}}</h2>
+<button (click)="fireEvent()">Sent Event</button>
+
+<!-- Pipes allow us to transform data before sending to the template -->
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | titlecase}}</h2> <!-- the first letter of every word will be in uppercase -->
+<h2>{{ name | slice:3}}</h2> <!-- slice give you a string which start from index number -->
+<h2>{{ person | json }}</h2> <!-- Json representation of the object -->
+<h2> {{ person.lastName }}</h2>
+
+<!--number pipes-->
+<h2>{{5.678 | number: '1.2-3'}}</h2> <!--minimum 1 digit, minimum  decimal place, last is maximum number of decimal places -->
+<h2> {{ 0.25 | percent }}</h2> <!-- converts to percentage-->
+<h2> {{ 0.25 | currency }}</h2>
+<h2> {{ 0.25 | currency: 'AUD' }}</h2>
+<h2> {{date}}</h2>
+<h2> {{date | date: 'short'}}</h2>
+<h2> {{date | date: 'shortDate'}}</h2>
+<h2> {{date | date: 'shortTime'}}</h2>
+<h2> {{date | date: 'medium'}}</h2>
+

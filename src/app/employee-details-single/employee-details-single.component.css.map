@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,iBAAiB;EACzB,MAAM,EAAE,OAAO;CAClB;;AAED,AAAA,EAAE,CAAC;EACC,UAAU,EAAE,IAAI;CACnB;;AAED,AAAA,MAAM,CAAC;EACH,MAAM,EAAE,kBAAkB;CAC7B;;AAED,AAAA,QAAQ,CAAC;EACL,gBAAgB,EAAE,SAAS;CAC9B;;AAED,AAAA,QAAQ,AAAA,MAAM,CAAA;EACV,gBAAgB,EAAE,SAAS;CAC9B",
+    "sources": [
+        "employee-details-single.component.scss"
+    ],
+    "names": [],
+    "file": "employee-details-single.component.css"
+}

@@ -1,0 +1,12 @@
+<button (click)="showProfile(employeeID)" class="btn btn-sm btn-primary">Profile</button>
+<button (click)="showContact(employeeID)" class="btn btn-sm btn-primary">Contact</button>
+
+<router-outlet></router-outlet>
+<!--For child route components-->
+<br>
+<button (click)="goPrevious()" class="btn btn-sm btn-nav">Previous</button>
+<button (click)="goNext()" class="btn btn-sm btn-nav">Next</button>
+
+<div>
+  <button (click)="gotoEmployees()" class="btn btn-sm btn-primary">Back</button>
+</div>

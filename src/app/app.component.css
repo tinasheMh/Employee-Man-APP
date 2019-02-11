@@ -1,0 +1,14 @@
+a {
+  padding-right: 20px;
+  text-decoration: none;
+  color: grey;
+}
+
+.active {
+  color: orange;
+}
+
+.items {
+  list-style: none;
+}
+/*# sourceMappingURL=app.component.css.map */

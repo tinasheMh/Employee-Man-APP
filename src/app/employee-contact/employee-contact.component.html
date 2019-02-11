@@ -1,0 +1,38 @@
+<h3>{{errorMsg}}</h3>
+
+<!--Loop here -->
+<div *ngFor="let employee of employees">
+  <div *ngIf="employee.id == employeeID">
+    <div class="flip-container centered">
+      <div class="flipper">
+        <div class="front"></div>
+        <div class="back">
+          <div class="font-a-icons">
+            <div class="icon-group">
+              <span class="bold">Mobile: </span><span class="contact">0459512954</span>
+            </div>
+            <div class="icon-group">
+              <span class="bold">Address: </span><span class="contact">{{employee.address.suite}}</span>
+            </div>
+            <div class="icon-group">
+              <span class="bold">Street: </span><span class="contact">{{employee.address.street}}</span>
+            </div>
+            <div class="icon-group">
+              <span class="bold">City: </span><span class="contact">{{employee.address.city}}</span>
+            </div>
+            <div class="icon-group">
+              <span class="bold">Email: </span><a class="contact" href="mailto:tmharabiz@gmail.com" target="_top">{{employee.email}}</a>
+            </div>
+            <div class="icon-group">
+              <a class="contact" href="http://www.instagram.com/knowiz" target="_blank">My Instagram</a>
+            </div>
+          </div>
+          <a class="icon-box" href="https://www.facebook.com/knowiz" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="icon-box" href="https://twitter.com/tinash3" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a class="icon-box" href="https://www.linkedin.com/in/tinashe-mharapara-5b008996/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a class="icon-box" href="https://github.com/tinasheMh" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<h3>{{errorMsg}}</h3>
+<!--Loop from here-->
+<div *ngFor="let employee of employees">
+  <div *ngIf="employee.id == employeeID">
+    <div class="flip-container centered">
+      <div class="flipper">
+        <div class="front"></div>
+        <div class="back">
+          <h1>{{employee.name}}</h1>
+          <p>Web Design & Development</p>
+          <div class="font-a-icons">
+            <div class="icon-group">
+              <span class="bold">Username: {{employee.username}}</span>
+            </div>
+          </div>
+          <a class="icon-box" href="https://www.facebook.com/knowiz" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="icon-box" href="https://twitter.com/tinash3" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a class="icon-box" href="https://www.linkedin.com/in/tinashe-mharapara-5b008996/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a class="icon-box" href="https://github.com/tinasheMh" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
